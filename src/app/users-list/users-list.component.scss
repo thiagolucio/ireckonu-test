@@ -1,0 +1,30 @@
+table {
+    width: 100%;
+  }  
+  th.mat-sort-header-sorted {
+    color: black;
+  }
+
+  .searchUserList {
+    width: 90%!important;
+    color: #333333;
+
+    .cliquedRowForDetails:hover {
+      cursor: pointer;
+      background: #cdcdcd;
+    }
+    
+    mat-form-field {
+      border: none!important;
+    }
+    .mat-form-field-infix {
+      border: none!important;
+    }
+
+    input {
+      background: white;
+      border: 0;
+      padding: 8px;
+      border: none!important;
+    }
+  }
