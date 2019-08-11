@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { UsersListService } from './users-list.service';
 import { UsersList } from './users-list';
 import { DataSource } from '@angular/cdk/collections';
@@ -15,15 +15,17 @@ import {MatTableDataSource} from '@angular/material/table';
 })
 export class UsersListComponent implements OnInit {
 
-  public usersListArray = [];
+  usersListArray = [];
   dataSource: any;
   data: any;
   public errorMsg: any;
 
   // dataSource = new UsersListDataSource(this.usersListService);
   // data = DataSource;
+  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
+  @ViewChild(MatSort, {static: true}) sort: MatSort;
 
-  displayedColumns: string[] = [
+  public displayedColumns: string[] = [
     'photo',
     'localid',
     'email',
@@ -33,27 +35,25 @@ export class UsersListComponent implements OnInit {
     'modified'
   ];
 
+   
   constructor(private usersListService: UsersListService) { }
 
   ngOnInit() {
-
     this.usersListService.getUsersList()
+
+
     .subscribe((data: UsersList[]) => {
-      //this.usersListArray = data;
-      this.data = this.usersListArray;
+      this.usersListArray = data;
+      data = this.usersListArray;
       this.dataSource = new MatTableDataSource(data);
-      console.log('Que merda é essa 1', this.data);
+      this.dataSource.paginator = this.paginator;
+      this.dataSource.sort = this.sort;
+      console.log('Que merda é essa 1', data);
       console.log('Que merda é essa 2', this.usersListArray);
       console.log('Que merda é essa 3', this.dataSource);
     });   
 
-    this.dataSource.paginator = this.paginator;
-    this.dataSource.sort = this.sort;
-
-  }
-  
-  @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
-  @ViewChild(MatSort, {static: true}) sort: MatSort;
+  } 
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();

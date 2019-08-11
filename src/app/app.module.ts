@@ -14,6 +14,7 @@ import { MatSortModule } from '@angular/material/sort';
 import { UsersListComponent } from './users-list/users-list.component';
 import { UsertableComponent } from './usertable/usertable.component';
 import { TableHttpExampleComponent } from './table-http-example/table-http-example.component';
+import { UserCobListComponent } from './user-cob-list/user-cob-list.component';
 
 
 
@@ -23,7 +24,8 @@ import { TableHttpExampleComponent } from './table-http-example/table-http-examp
     NavsComponent,
     UsersListComponent,
     UsertableComponent,
-    TableHttpExampleComponent
+    TableHttpExampleComponent,
+    UserCobListComponent
   ],
   imports: [
     BrowserModule,
