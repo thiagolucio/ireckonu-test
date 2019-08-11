@@ -6,6 +6,7 @@ import { Observable, Subscriber } from 'rxjs';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
+import { MatFormFieldDefaultOptions } from '@angular/material';
 
 
 @Component({
@@ -79,3 +80,6 @@ export class UsersListDataSource extends DataSource<any> {
   disconnect() { }
 
 }
+const appearance: MatFormFieldDefaultOptions = {
+  appearance: 'outline'
+};

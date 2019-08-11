@@ -1,30 +1,51 @@
+.mat-table, .mat-cell, .mat-footer-cell {
+  font-family: 'Open Sans', sans-serif!important;
+  font-size: 12px!important;
+  font-weight: 400!important;
+}
 table {
     width: 100%;
   }  
   th.mat-sort-header-sorted {
     color: black;
   }
-
-  .searchUserList {
-    width: 90%!important;
-    color: #333333;
-
-    .cliquedRowForDetails:hover {
-      cursor: pointer;
-      background: #cdcdcd;
-    }
-    
-    mat-form-field {
-      border: none!important;
-    }
-    .mat-form-field-infix {
-      border: none!important;
-    }
-
-    input {
-      background: white;
-      border: 0;
-      padding: 8px;
-      border: none!important;
-    }
+.custom-search {
+  width: 80%;
+  margin: 12px;
+  line-height: 48px;
+  height: 48px;
+  background: #FFFFFF;
+  font-family: 'Open Sans', sans-serif!important;
+  font-size: 12px!important;
+  font-weight: 400!important;
+  color: black; 
+  //placeholder color same to pics models
+  ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: black;
   }
+  ::-moz-placeholder { /* Firefox 19+ */
+    color: black;
+  }
+  :-ms-input-placeholder { /* IE 10+ */
+    color: black;
+  }
+  :-moz-placeholder { /* Firefox 18- */
+    color: black;
+  }
+}
+.custom-search input {
+  vertical-align: top;
+  margin: auto;
+}
+.custom-search .mat-icon {
+  line-height: 48px;
+  height: 48px;
+  padding: 0 8px;
+}
+
+.button-search {
+  padding: 6px 24px!important;  
+  border-radius: 2px;
+  background: #2076A2;
+}
+
