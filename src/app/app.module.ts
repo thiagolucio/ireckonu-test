@@ -12,6 +12,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { UsersListComponent } from './users-list/users-list.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 
 
@@ -20,6 +21,7 @@ import { UsersListComponent } from './users-list/users-list.component';
     AppComponent,
     NavsComponent,
     UsersListComponent,
+    UserDetailsComponent,
   ],
   imports: [
     BrowserModule,

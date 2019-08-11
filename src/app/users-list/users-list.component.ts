@@ -6,7 +6,7 @@ import { Observable, Subscriber } from 'rxjs';
 import {MatPaginator} from '@angular/material/paginator';
 import {MatSort} from '@angular/material/sort';
 import {MatTableDataSource} from '@angular/material/table';
-import { MatFormFieldDefaultOptions } from '@angular/material';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -20,6 +20,7 @@ export class UsersListComponent implements OnInit {
   dataSource: any;
   data: any;
   public errorMsg: any;
+  
 
   // dataSource = new UsersListDataSource(this.usersListService);
   // data = DataSource;
@@ -33,28 +34,22 @@ export class UsersListComponent implements OnInit {
     'first_name',    
     'phone',
     'address',
-    'modified'
+    'modified',
+    "view"   
   ];
 
-   
-  constructor(private usersListService: UsersListService) { }
-
+  constructor(private usersListService: UsersListService, private router: Router) { }
+  
   ngOnInit() {
     this.usersListService.getUsersList()
-
-
     .subscribe((data: UsersList[]) => {
-      this.usersListArray = data;
+      this.usersListArray = data; 
       data = this.usersListArray;
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.paginator = this.paginator;
-      this.dataSource.sort = this.sort;
-      console.log('Que merda é essa 1', data);
-      console.log('Que merda é essa 2', this.usersListArray);
-      console.log('Que merda é essa 3', this.dataSource);
-    });   
-
-  } 
+      this.dataSource.sort = this.sort;          
+    });
+  }
 
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -80,6 +75,3 @@ export class UsersListDataSource extends DataSource<any> {
   disconnect() { }
 
 }
-const appearance: MatFormFieldDefaultOptions = {
-  appearance: 'outline'
-};

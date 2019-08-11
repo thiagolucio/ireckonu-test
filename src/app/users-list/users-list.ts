@@ -11,5 +11,6 @@ export interface UsersList {
   loyalty_member_id: number,
   phone: Number,
   address: String,
-  birthdate: Date 
+  birthdate: Date,
+  view: string 
 }

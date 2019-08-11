@@ -9,6 +9,9 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class UsersListService {
+  getUserDetails() {
+    throw new Error("Method not implemented.");
+  }
 
   private readonly APIUSERLIST = `${environment.API}/Data.json`;
 

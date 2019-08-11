@@ -27,7 +27,8 @@ import {
     MatSlideToggleModule,
     MatSelectModule,
     MatListModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatBadgeModule
 } from '@angular/material';
 
 @NgModule({
@@ -57,7 +58,8 @@ import {
         MatSlideToggleModule,
         MatSelectModule,
         MatListModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        MatBadgeModule
     ],
     exports: [
         MatGridListModule,
@@ -85,7 +87,8 @@ import {
         MatSlideToggleModule,
         MatSelectModule,
         MatListModule,
-        MatProgressSpinnerModule
+        MatProgressSpinnerModule,
+        MatBadgeModule
 
     ],
     declarations: [
