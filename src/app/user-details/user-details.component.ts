@@ -2,8 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {UsersListService} from '../users-list/users-list.service';
 import { UsersList } from '../users-list/users-list';
 import { ActivatedRoute, Router } from "@angular/router";
-import { url } from 'inspector';
-
 
 @Component({
   selector: 'app-user-details',
@@ -12,25 +10,26 @@ import { url } from 'inspector';
 })
 export class UserDetailsComponent implements OnInit {
   
-  subscribedParam = "initial value";
+  userData: any;
 
   constructor(
     private readonly route: ActivatedRoute,
     private readonly router: Router,
+    private usersListService: UsersListService
   ) { }
 
   ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      this.subscribedParam = params.get("usersList");
-    });
+    // console.log('PARAMETROS ', this.route.params['']);
+    this.route.params.subscribe(params => {
+      const idUser = params['localid'];
+      this.usersListService.getUsersList()
+      .subscribe((data: UsersList[]) => {
+         let usrDetail = data.filter( user => user.localid == idUser); 
+        console.log('USER DETAIL', usrDetail); 
+        this.userData = usrDetail[0]; 
+        console.log('USER DATA', this.userData);     
+      });
+      console.log(params['localid']);
+    });    
   }
-
-
-  routerLink(usersList: []): void {
-    this.router.navigate(["userDetails", usersList]);
-  }
-       
-  
-
-
 }
