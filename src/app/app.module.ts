@@ -15,7 +15,6 @@ import { UsersListComponent } from './users-list/users-list.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,11 +31,11 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     HttpClientModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule 
+    MatSortModule,
   ],
   exports: [
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

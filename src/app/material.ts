@@ -1,4 +1,4 @@
-// import { FlexLayoutModule } from '@angular/flex-layout';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -28,7 +28,7 @@ import {
     MatSelectModule,
     MatListModule,
     MatProgressSpinnerModule,
-    MatBadgeModule
+    MatBadgeModule,    
 } from '@angular/material';
 
 @NgModule({
@@ -59,7 +59,8 @@ import {
         MatSelectModule,
         MatListModule,
         MatProgressSpinnerModule,
-        MatBadgeModule
+        MatBadgeModule,
+        FlexLayoutModule
     ],
     exports: [
         MatGridListModule,
@@ -88,8 +89,8 @@ import {
         MatSelectModule,
         MatListModule,
         MatProgressSpinnerModule,
-        MatBadgeModule
-
+        MatBadgeModule,
+        FlexLayoutModule
     ],
     declarations: [
 
