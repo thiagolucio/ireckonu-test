@@ -1,41 +1,245 @@
 <div class="topSearch">
-    <mat-toolbar color="primary" style="min-height: 150px;">
+    <mat-toolbar color="primary" class="mh150">
         <mat-toolbar-row>
             <h1 class="text-white fs2em ml16p">Profile:</h1>
-            <span style="margin: 25px 0 0 16px;">
-                <img mat-card-image src="https://robohash.org/nihilblanditiisexercitationem.bmp?size=50x50&set=set1" alt="" matBadge="8" matBadgePosition="after" matBadgeColor="accent">
+            <span style="margin: 25px 0 0 16px;" matBadge="in" matBadgePosition="after" matBadgeColor="accent">
+                <img mat-card-image src="{{userData.photo}}" alt="user foto" class="br50p">
             </span>
-            <span style="text-indent: 16px; color: white;">Name here</span>
+            <span style="text-indent: 16px;" class="text-white fs2em ml16p">{{userData.first_name}}</span>           
         </mat-toolbar-row>
         <mat-toolbar-row>
-            <span class="example-spacer"></span>
-
         </mat-toolbar-row>
     </mat-toolbar>
 </div>
 
-<div class="container" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center"> 
-    <div fxFlex="20%" class="mat-elevation-z8">
-        <mat-card style="min-height: 350px;">dededede </mat-card>
+<div class="container _mt50" fxLayout="row" fxLayout.xs="column" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="center">       
+        <button mat-mini-fab color="accent" [routerLink]="['/' ]"><mat-icon>arrow_back</mat-icon></button>
+    <div fxFlex="15%">  
+        <mat-card class="h95p">
+            <h3>Quick Facts</h3>
+            <div fxLayout="row" fxLayoutAlign="space-between center">
+                <div>Status</div>
+                <div><i class="fas fa-external-link-alt fa-lg blue"></i></div>
+            </div>
+            <hr>
+            <div>
+                <div fxFlex="10%">
+                    <mat-icon style="color: chocolate">account_box</mat-icon>
+                </div>
+                <div fxFlex="90%" class="p4">
+                    <div>ID : SH051545</div>
+                    <div>Tier: Gold</div>
+                    <div>Pts: 125,024</div>
+                </div>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="mt16">
+                <div>Top 3 Facts</div>
+                <div><i class="fas fa-external-link-alt fa-lg blue"></i></div>
+            </div>
+            <hr>
+
+            <div>
+                <div fxFlex="10%">
+                    <mat-icon color="accent">error</mat-icon>
+                </div>
+                <div fxFlex="90%" class="p4">
+                    <div>Suite Rom</div>
+                    <div>King Bed</div>
+                    <div>Highhest Floor</div>
+                </div>
+            </div>
+
+
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="mt16">
+                <div>RFM Score</div>
+                <div><i class="fas fa-external-link-alt fa-lg blue"></i></div>
+            </div>
+            <hr>
+
+            <div>
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxFlex="20%">
+                        <div class="w50 h50">
+                            <mat-progress-spinner                             
+                            [diameter]="30" 
+                            [strokeWidth]="5" 
+                            [color]="color" 
+                            [mode]="mode" 
+                            [value]="value">
+                            </mat-progress-spinner>
+                            <div class="pr fs9 t-20 l6">80%</div>
+                        </div>
+                    </div>
+                    <div fxFlex="90%">R: 70%</div>
+                    <div fxFlex="90%">F: 50%</div>
+                    <div fxFlex="90%">M: 90%</div>
+                </div>
+            </div>
+
+            <div fxLayout="row" fxLayoutAlign="space-between center" class="mt16">
+                <div>Others Facts</div>
+                <div><i class="fas fa-external-link-alt fa-lg blue"></i></div>
+            </div>
+            <hr>
+
+
+            <div class="m20">
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxFlex="10%">
+                        <i class="far fa-calendar-alt fa-lg"></i>
+                    </div>
+                    <div fxFlex="50%">Total Stays: </div>
+                    <div fxFlex="40%">24</div>
+                </div>
+            </div>
+
+            <div class="m20">
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxFlex="10%">
+                        <i class="fas fa-moon fa-lg"></i>
+                    </div>
+                    <div fxFlex="50%">Nights: </div>
+                    <div fxFlex="40%">32</div>
+                </div>
+            </div>
+
+            <div class="m20">
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxFlex="10%">
+                        <i class="fas fa-bed fa-lg"></i>
+                    </div>
+                    <div fxFlex="50%">Avg Stay: </div>
+                    <div fxFlex="40%">1.33 nights</div>
+                </div>
+            </div>
+
+            <div class="m20">
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxFlex="10%">
+                        <i class="far fa-calendar-check fa-lg"></i>
+                    </div>
+                    <div fxFlex="50%">Last Visit: </div>
+                    <div fxFlex="40%">2018-08-15</div>
+                </div>
+            </div>
+
+            <div class="m20">
+                <div fxLayout="row" fxLayoutAlign="space-between center">
+                    <div fxFlex="10%">
+                        <i class="fas fa-money-bill-wave fa-lg"></i>
+                    </div>
+                    <div fxFlex="50%">Lifetime Value: </div>
+                    <div fxFlex="40%">$ 3084.29</div>
+                </div>
+            </div>
+        </mat-card>
     </div>
-    <div fxFlex="70%" class="mat-elevation-z8">
+    <div fxFlex="75%">
         <mat-tab-group>
             <mat-tab label="Profile Detail">
-                <mat-card class="mat-elevation-z8" style="margin-top: 50px; background-color: white!important;">
-                    <div style="color: black; font-size: 16px;">
-                        {{userData.address}}
+                <div class="body-profile-detail mat-elevation-z1">
+                    <div class="content-profile">
+                        <h1>Profile Detail</h1>
+                        <mat-list class="bg-white" fxFill>
+                            <mat-list-item class="w100p">
+                                <div class="fw300 w20p">Prefix</div>
+                                <div class="w70p">{{userData.prefix}}</div>
+                                <div class="w10p text-right">
+                                    <mat-icon mat-list-icon class="text-gray">edit</mat-icon>
+                                </div>
+                            </mat-list-item>
+                            <mat-divider></mat-divider>
+                            <mat-list-item class="w100p">
+                                <div class="fw300 w20p">First Name</div>
+                                <div class="w70p">{{userData.first_name}}</div>
+                                <div class="w10p text-right">
+                                    <mat-icon mat-list-icon class="text-gray">edit</mat-icon>
+                                </div>
+                            </mat-list-item>
+                            <mat-divider></mat-divider>
+
+                            <mat-list-item class="w100p">
+                                <div class="fw300 w20p">Last Name</div>
+                                <div class="w70p">{{userData.last_name}}</div>
+                                <div class="w10p text-right">
+                                    <mat-icon mat-list-icon class="text-gray">edit</mat-icon>
+                                </div>
+                            </mat-list-item>
+
+                            <mat-divider></mat-divider>
+
+                            <mat-list-item class="w100p">
+                                <div class="fw300 w20p">Sufix</div>
+                                <div class="w70p">{{userData.sufix}}</div>
+                                <div class="w10p text-right">
+                                    <mat-icon mat-list-icon class="text-gray">edit</mat-icon>
+                                </div>
+                            </mat-list-item>
+
+                            <mat-divider></mat-divider>
+
+                            <mat-list-item class="w100p">
+                                <div class="fw300 w20p">Loyalty Member ID</div>
+                                <div class="w70p">{{userData.loyalty_member_id}}</div>
+                                <div class="w10p text-right">
+                                    <mat-icon mat-list-icon class="text-gray">edit</mat-icon>
+                                </div>
+                            </mat-list-item>
+
+                            <mat-divider></mat-divider>
+
+                            <mat-list-item class="w100p">
+                                <div class="fw300 w20p">Phone</div>
+                                <div class="w70p">(+31) {{userData.phone}}</div>
+                                <div class="w10p text-right">
+                                    <mat-icon mat-list-icon class="text-gray">edit</mat-icon>
+                                </div>
+                            </mat-list-item>
+
+                            <mat-divider></mat-divider>
+
+                            <mat-list-item class="w100p">
+                                <div class="fw300 w20p">Address</div>
+                                <div class="w70p">{{userData.address}}</div>
+                                <div class="w10p text-right">
+                                    <mat-icon mat-list-icon class="text-gray">edit</mat-icon>
+                                </div>
+                            </mat-list-item>
+
+                            <mat-divider></mat-divider>
+
+                            <mat-list-item class="w100p">
+                                <div class="fw300 w20p">Birthdate</div>
+                                <div class="w70p">{{userData.birthdate | date: 'yyyy/M/d'}}</div>
+                                <div class="w10p text-right">
+                                    <mat-icon mat-list-icon class="text-gray">edit</mat-icon>
+                                </div>
+                            </mat-list-item>
+
+                            <mat-divider></mat-divider>
+
+                            <mat-list-item class="w100p">
+                                <div class="fw300 w20p">Language Preference</div>
+                                <div class="w70p">English</div>
+                                <div class="w10p text-right">
+                                    <mat-icon mat-list-icon class="text-gray">edit</mat-icon>
+                                </div>
+                            </mat-list-item>
+                        </mat-list>
                     </div>
-                </mat-card>
+                </div>
+
             </mat-tab>
             <mat-tab label="Profile ID's">
-                <mat-card class="mat-elevation-z8" style="margin-top: 50px; background-color: white!important;">
+                <mat-card>
                     <div>
                         Content 2
                     </div>
                 </mat-card>
             </mat-tab>
             <mat-tab label="Activity Timeline">
-                <mat-card class="mat-elevation-z8" style="margin-top: 50px; background-color: white!important;">
+                <mat-card>
                     <div>
                         Content 3
                     </div>

@@ -1,19 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-html, body {
+body {
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', sans-serif!important;
-    font-size: 12px!important;
-    font-weight: normal!important;
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    font-weight: normal;
 }
 .container2pc {
     padding: 2%;
 }
+.mat-card-image {width: 50px; height: 50px; border-radius: 50px;}
+.p4 {padding: 4px;}
 .ml16p {margin-left: 16px!important;}
-
+.mt16 {margin-top: 16px;}
+.t-20{top: -20px;}
+.l6 {left: 6px;}
 .fs2em {font-size: 1.5em!important;}
-
+.fs9{font-size: 9px;}
+.fw300 {font-weight: 300;}
 .text-black {color: black}
 .text-white {color: white}
+.text-gray {color: #CDCDCD}
+.text-right {text-align: right}
+.w10p {width: 10%}
+.w20p {width: 20%}
+.w70p {width: 70%}
+.w80p {width: 80%}
+.h95p {height: 95%}
+.w100p {width: 100%}
+.w50 {width: 50px;}
+.h50 {height: 50px;}
+._mt50 {margin-top: -50px}
+.bg-white {background-color: white}
+.mh150 {min-height: 150px;}
+.mh350 {min-height: 350px;}
+.br50p {border-radius: 50%;}
+.border-bottom{border-bottom: 1px solid #CDCDCD}
+.m20 {margin: 20px 0;}
+.blue {color: rgb(25, 160, 201)}
+.pr{position: relative;}

@@ -9,7 +9,9 @@ import { ActivatedRoute, Router } from "@angular/router";
   styleUrls: ['./user-details.component.scss']
 })
 export class UserDetailsComponent implements OnInit {
-  
+  color = 'primary';
+  mode = 'determinate';
+  value = 80;
   userData: any;
 
   constructor(
